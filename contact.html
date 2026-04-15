@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Personal Course Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">Course<span>Hub</span></div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="my-courses.html">My Courses</a></li>
+          <li><a href="add-course.html">Add Course</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <div class="page-title">
+      <h2>Contact Us</h2>
+      <p>Have a question or feedback? We'd love to hear from you.</p>
+      <div class="divider"></div>
+    </div>
+
+    <section>
+      <div class="contact-grid">
+
+        <!-- Info Panel -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+
+          <div class="contact-item">
+            <div class="icon">📧</div>
+            <div>
+              <p><strong>Email</strong>support@coursehub.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <div>
+              <p><strong>Phone</strong>+20 100 000 0000</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <p><strong>Address</strong>123 University St, Cairo, Egypt</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">🕐</div>
+            <div>
+              <p><strong>Working Hours</strong>Sun – Thu, 9:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card" style="box-shadow:none; border:1px solid var(--border);">
+          <form id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span>*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Ahmed" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span>*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Mohamed" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span>*</span></label>
+              <input type="email" id="email" name="email" placeholder="ahmed@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help you?" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span>*</span></label>
+              <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="reset" class="btn btn-reset">Clear</button>
+            </div>
+
+          </form>
+
+          <div id="contactSuccess" style="
+            display:none;
+            margin-top:20px;
+            padding:14px 18px;
+            background:#d4edda;
+            color:#155724;
+            border-radius:var(--radius);
+            font-weight:500;
+            font-size:0.9rem;
+          ">
+            ✅ Your message has been sent! We'll get back to you soon.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span> – Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const first = document.getElementById('firstName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg   = document.getElementById('message').value.trim();
+
+      if (!first || !email || !msg) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      document.getElementById('contactSuccess').style.display = 'block';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
