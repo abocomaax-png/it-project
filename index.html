@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home – Personal Course Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">Course<span>Hub</span></div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="my-courses.html">My Courses</a></li>
+          <li><a href="add-course.html">Add Course</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Organize Your <span>Learning Journey</span> in One Place</h1>
+      <p>Track all your courses, monitor your progress, and stay on top of your studies with the Personal Course Organizer.</p>
+      <a href="add-course.html" class="btn btn-accent">+ Add a Course</a>
+    </section>
+
+    <!-- Feature Cards -->
+    <section>
+      <h2 class="section-heading">Why Use CourseHub?</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Track Your Courses</h3>
+          <p>Keep all your enrolled courses in one organized table with key details at a glance.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✏️</div>
+          <h3>Easy to Add</h3>
+          <p>Add new courses in seconds using our simple and clean form – no sign-up needed.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Monitor Progress</h3>
+          <p>See course status, credit hours, and instructor info all in one place.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <h3>Works on Any Device</h3>
+          <p>Fully responsive design that looks great on mobile, tablet, and desktop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section>
+      <h2 class="section-heading">Quick Actions</h2>
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">📋</div>
+          <h3>View My Courses</h3>
+          <p style="margin-bottom:16px;">Browse all your registered courses.</p>
+          <a href="my-courses.html" class="btn btn-outline">Go to Courses</a>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">➕</div>
+          <h3>Add New Course</h3>
+          <p style="margin-bottom:16px;">Register a new course to your list.</p>
+          <a href="add-course.html" class="btn btn-accent">Add Course</a>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">✉️</div>
+          <h3>Contact Support</h3>
+          <p style="margin-bottom:16px;">Have a question? Reach out to us.</p>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span> – Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
