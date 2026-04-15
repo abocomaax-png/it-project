@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Courses – Personal Course Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">Course<span>Hub</span></div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="my-courses.html" class="active">My Courses</a></li>
+          <li><a href="add-course.html">Add Course</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <div class="page-title">
+      <h2>My Courses</h2>
+      <p>All your registered courses in one place.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; margin-bottom:16px;">
+      <a href="add-course.html" class="btn btn-accent">+ Add New Course</a>
+    </div>
+
+    <section>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Course Name</th>
+              <th>Instructor</th>
+              <th>Credit Hours</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Introduction to Web Development</td>
+              <td>Dr. Sarah Ahmed</td>
+              <td>3</td>
+              <td><span class="badge badge-green">Completed</span></td>
+              <td>Covers HTML, CSS & JS basics</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Database Systems</td>
+              <td>Prof. Mohamed Ali</td>
+              <td>4</td>
+              <td><span class="badge badge-blue">In Progress</span></td>
+              <td>Focus on SQL and normalization</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Data Structures & Algorithms</td>
+              <td>Dr. Khaled Hassan</td>
+              <td>3</td>
+              <td><span class="badge badge-blue">In Progress</span></td>
+              <td>Trees, graphs, sorting algorithms</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Operating Systems</td>
+              <td>Prof. Rania Mostafa</td>
+              <td>3</td>
+              <td><span class="badge badge-yellow">Upcoming</span></td>
+              <td>Process management & memory</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Computer Networks</td>
+              <td>Dr. Omar Fathy</td>
+              <td>3</td>
+              <td><span class="badge badge-yellow">Upcoming</span></td>
+              <td>TCP/IP, OSI model, protocols</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Software Engineering</td>
+              <td>Prof. Nour El-Din</td>
+              <td>4</td>
+              <td><span class="badge badge-green">Completed</span></td>
+              <td>Agile, SDLC, UML diagrams</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section style="margin-top:28px;">
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">📚</div>
+          <h3 style="font-size:1.6rem; color:var(--primary);">6</h3>
+          <p>Total Courses</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">✅</div>
+          <h3 style="font-size:1.6rem; color:var(--success);">2</h3>
+          <p>Completed</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">🔄</div>
+          <h3 style="font-size:1.6rem; color:#004085;">2</h3>
+          <p>In Progress</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon">🗓️</div>
+          <h3 style="font-size:1.6rem; color:#856404;">2</h3>
+          <p>Upcoming</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span> – Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
